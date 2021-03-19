@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const getIpAddress = async () => {
       ipaddress = await publicIp.v4()
-      ipdatastore = await axios.get(`http://ip-api.com/json/${ipaddress}`)
+      ipdatastore = await axios.get(`https://ip-api.com/json/${ipaddress}`)
       setIpData(ipdatastore.data)
     }
     getIpAddress()
